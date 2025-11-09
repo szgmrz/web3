@@ -1,0 +1,199 @@
+/* 全局样式 */
+:root {
+    --primary-color: #8B7355;
+    --secondary-color: #D4B896;
+    --dark-color: #333333;
+    --light-color: #f8f9fa;
+}
+
+body {
+    font-family: 'Noto Serif SC', serif;
+    color: var(--dark-color);
+    padding-top: 76px;
+}
+
+/* 导航栏品牌标志 - 艺术字体 */
+.navbar-brand.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    letter-spacing: 1px;
+}
+
+/* 页脚品牌标志 */
+.logo-footer {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* 页面标题区域 */
+.page-header {
+    margin-top: -20px;
+}
+
+/* 部分标题样式 */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin-top: 10px;
+}
+
+/* 轮播图样式 */
+.carousel-item {
+    height: 600px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* 服务卡片样式 */
+.service-card {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    color: var(--primary-color);
+}
+
+/* 案例展示样式 */
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.portfolio-card img {
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(139, 115, 85, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-content {
+    text-align: center;
+    color: white;
+}
+
+/* 团队成员样式 */
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* 服务流程样式 */
+.process-step {
+    position: relative;
+    display: inline-block;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* 客户评价样式 */
+.testimonial-card {
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.author-avatar img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+/* 联系信息样式 */
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+}
+
+/* 表单样式 */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(139, 115, 85, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #7a6348;
+    border-color: #7a6348;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 400px;
+    }
+    
+    body {
+        padding-top: 66px;
+    }
+}
